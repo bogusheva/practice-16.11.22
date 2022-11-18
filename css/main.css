@@ -1,0 +1,210 @@
+/* mixin usage */
+/*--------------------------------
+	Responsive ratio
+	Used for creating scalable elements that maintain the same ratio
+	example:
+	.element {
+		@include responsive-ratio(400, 300);
+	}
+*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer {
+  width: 100%;
+}
+
+h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 52px;
+  padding: 0 0 40px;
+  margin: 0;
+}
+
+h4 {
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 0 0 15px;
+  margin: 0;
+}
+
+.body-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  color: #16133d;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  padding: 0 23px;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 135px;
+  }
+}
+
+.header-container {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.main-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.main-container .cards-holder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+@media (min-width: 768px) {
+  .main-container .cards-holder {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (min-width: 1024px) {
+  .main-container .cards-holder {
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap;
+  }
+}
+.main-container .card-holder {
+  padding: 40px;
+  border: 1px solid transparent;
+}
+.main-container .card-holder:hover {
+  border: 1px solid #3db370;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .main-container .card-holder {
+    width: calc(50% - 30px);
+  }
+}
+@media (min-width: 1024px) {
+  .main-container .card-holder {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+.main-container .card-holder .sprite-holder {
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-position: 14px 14px;
+  margin-bottom: 30px;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+.main-container .card-holder .sprite-holder:hover {
+  background-position: 14px -41px;
+}
+.main-container .card-holder .sprite-holder.design {
+  background-image: url(../img/megaphones.svg);
+}
+.main-container .card-holder .sprite-holder.ecommerce {
+  background-image: url(../img/buildings.svg);
+}
+.main-container .card-holder .sprite-holder.application {
+  background-image: url(../img/phones.svg);
+}
+.main-container .pseudo-title {
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #7690a8;
+  padding-bottom: 15px;
+}
+.main-container .card-description {
+  margin: 0;
+  padding: 0 0 30px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.main-container .learn-more {
+  color: #3db370;
+  font-weight: 600;
+  line-height: 19px;
+}
+
+.footer-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #16133d;
+}
+.footer-container .logo-holder {
+  padding-bottom: 40px;
+}
+.footer-container #logo-text {
+  fill: #ffffff;
+}
+.footer-container #logo-vector {
+  fill: #16133d;
+}
+.footer-container .social-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+.footer-container .social-holder .icon-holder {
+  background-color: white;
+  padding: 9px;
+  width: 38px;
+  height: 38px;
+  border-radius: 5px;
+}
+.footer-container .social-holder .icon-holder:hover #instagram-icon,
+.footer-container .social-holder .icon-holder:hover #facebook-icon,
+.footer-container .social-holder .icon-holder:hover #github-icon,
+.footer-container .social-holder .icon-holder:hover #dribble-icon,
+.footer-container .social-holder .icon-holder:hover #twitter-icon {
+  fill: #3db370;
+}
+
+/* mixin usage */
+/*--------------------------------
+	Responsive ratio
+	Used for creating scalable elements that maintain the same ratio
+	example:
+	.element {
+		@include responsive-ratio(400, 300);
+	}
+*/
